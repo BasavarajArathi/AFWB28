@@ -1,0 +1,160 @@
+PyTest-Unit Testing tool or Framework
+used to run multiple tests and generate report
+in PyTest module,class and method should start with 'test'
+we run the test from terminal
+	Right click on the package-->Open in -->terminal
+in the terminal use the cmd 'pytest'
+>pytest
+
+it will collect all the methods which starts with 'test' and runs them one by one automatically
+>pytest -v              verbose (more details)
+
+
+>pytest -vs             verbose + std o/p
+
+>pytest test_demo1.py  -vs
+
+>pytest test_demo2.py::Test_Class3  -vs
+
+>pytest test_demo2.py::Test_Class3::test_method6  -vs
+
+pip install pytest-html
+
+>pytest --html=myreport.html
+
+To check which package->module->class->method will be considered for execution
+pytest --collect-only
+
+i dont want to run a test
+@pytest.mark.skip 
+
+@pytest.mark.skip(reason="there is a known issue 123") 
+
+@pytest.mark.skipif(a<b)
+
+@pytest.mark.skipif(a<b,reason="a < b so skipping")
+
+Any word which starts with @ ----> annotation-- syntatic meta data
+
+to perfom verification we use assert
+
+by default pytest will continue the execution even if there are any failures
+in order to stop the execution (when any test failed) then use -x
+
+pytest test_demo4.py -vs -x		- stop at 1st fail
+
+pytest test_demo4.py -vs --maxFail=4    - stop at 4th fail
+
+rerun only failed test
+pytest test_demo4.py -vs --lf
+
+Note: if there are no failures in last execution then above cmd will rerun all the tests
+
+How to re run all methods but failed first then the passed ones
+pytest test_demo4.py -vs --ff
+
+By default execution order is --->alphabatical order of file and top to bottom of the methods
+
+To run the test method in req order we use --> pip install pytest-ordering
+@pytest.mark.run(order=1)
+@pytest.mark.run(order=2)
+
+ 
+
+How do u run create user 1st and then create  product----ANS: 
+1. run 'create user'  (Pass/Fail) 
+2. run 'create product'
+
+----ANS: ensure that method1 is  create user and method 2 is create product
+         use 'order' create user order is 1,    create product order is 2
+
+
+How do u run delete customer after create customer is passed
+1. run 'create customer'  (pass/fail)
+2. run 'delete customer' only if 'create customer' is passed
+
+ANS: use dependency
+pip install pytest-dependency
+
+specify the name for dependency for create customer method-->
+@pytest.mark.dependency(name="create_customer")
+
+specify the dependency in  delete customer method-->
+@pytest.mark.dependency(depends=["create_customer"])
+
+Note: a method can depend on multiple methods
+
+------------------------------------------------------------------------------------------
+to run a test multiple times with diff inputs we should use 'parameterize'
+
+@pytest.mark.parametrize("customer_name",("bhanu","basava"))
+def test_customer(customer_name):
+        print("create customer:",customer_name)
+
+@pytest.mark.parametrize("name,mrp",[("java",10000),("selenium",12000)])
+def test_product(name,mrp):
+        print("product name:",name)
+        print("product mrp:", mrp)
+
+
+to run methods based on keywords
+pytest -vs -k user
+
+We can create our own marker for grouping the tests
+create a file with the name pytest.ini with following content
+[pytest]
+markers=
+        smoke: this is smoke test case
+        regression: this is regression test case
+        customer: this is customer module test case
+        product:this is product module test case
+        user: this is user module test case
+
+
+specify these markers in test
+
+@pytest.mark.user
+@pytest.mark.smoke
+def test_create_user():
+    print("test_create_user")
+
+
+run it using -m
+
+>pytest -vs -m smoke
+
+>pytest -vs -m 'smoke and user'
+
+
+>pytest -vs -m 'smoke or user'
+
+
+>pytest -vs -m 'not smoke'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

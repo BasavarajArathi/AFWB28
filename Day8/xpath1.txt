@@ -1,0 +1,16 @@
+<span class="errormsg">Username or Password is invalid. Please try again.</span>
+
+1] //input[@id='username']
+2] //input[@name='pwd']
+3] //input[@id='keepLoggedInCheckBox']
+4] //a[@id='loginButton']
+5] //a[@id='toPasswordRecoveryPageLink']
+6] //nobr[text()='actiTIME 2020 Online']
+7] //a[text()='actiTIME Inc.']
+8] //div[@class='atProductName']
+9] //div[@class='atLogoImg']
+10] //td[@id='headerContainer']
+
+
+//span[starts-with(text(),'Username']
+//span[contains(text(),'invalid')]

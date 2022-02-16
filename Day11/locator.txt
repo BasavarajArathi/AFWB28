@@ -1,0 +1,11 @@
+locators
+  tag,id,name,cn,lt,plt.css,xpath
+
+	id -> name -> lt -> xpath(relative->attribute--->text--->contains->I-D --> global index)
+                   (//a)[last()-1]
+w.rt other---?
+  relative loctor-to left of 
+                   to right
+                   above
+                   below
+                   near

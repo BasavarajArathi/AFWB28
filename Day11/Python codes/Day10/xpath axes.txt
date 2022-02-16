@@ -1,0 +1,33 @@
+xpath axes
+
+child
+descendant
+parent
+ancestor
+following-sibling
+preceding-sibling
+
+systax:   /axes::tag
+./child::html/child::body/child::table/child::tbody     child -----> /
+./html/body/table/tbody
+
+./descendant::tbody   //tbdoy				descendant--> //
+
+//th[text()='Sl No']/parent::tr --> //th[.='Sl No']/..     parent--->/..
+
+//th[text()='Sl No']/ancestor::html
+
+//td[.='1']/following-sibling::td		2       Java 100
+
+//td[.='1']/following-sibling::td[1]            1       java
+
+//td[.='1']/following-sibling::td[2]            1        100
+
+//td[.='200']/preceding-sibling::td		2      SQL 2
+
+//td[.='200']/preceding-sibling::td[1]		1       SQL
+
+
+//td[.='200']/preceding-sibling::td[2]		1	2
+
+

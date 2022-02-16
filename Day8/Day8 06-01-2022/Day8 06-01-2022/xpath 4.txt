@@ -1,0 +1,19 @@
+html
+<span class="errormsg">Username or Password is invalid. Please try again.</span>
+
+
+//span[@class='errormsg']
+
+//span[text()='Username or Password is invalid. Please try again.']
+
+//span[contains(text(),'invalid')]
+//span[contains(.,'invalid')]
+
+//input[@id='username'] ----> input#username
+
+//*[@id='username']----->       #username
+
+xpath do not support <svg> tag so in that case we use *
+
+.//div[.='akshara']----> //div[text()='akshara']
+

@@ -1,0 +1,21 @@
+absolute   & relative
+/h/b/d/i     //i
+index?----/h/b/d/i[1]     //i[1]
+attribute in xpath?
+tag[@AN='AV']
+tag[text()='tv']
+tag[@AN='av' and @AN2='av2']
+tag[@AN='av' and text()='tv']
+tag[@AN='av' or text()='tv']
+tag[not(@AN='av')]
+tag[not(text()='tv')]
+
+tag[contains(arg1,arg2)] tag[starts-with(arg1,arg2)]
+arg1---> @AN  text()
+arg2----> 'value'
+
+*----> any tag
+.-----> text()  XXXX
+
+
+

@@ -1,0 +1,12 @@
+Reasons for NoSuchElementException
+
+1.locator value is wrong (dif case ,typing mistake....)
+2.locator type is wrong
+3.sync issue
+4.element not present in html (diff build)
+5.inside the frame 
+6.Diff frame (not in current search context)
+7. Diff tab
+8. Diff browser
+ 
+    

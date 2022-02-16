@@ -1,0 +1,34 @@
+<nobr>actiTIME 2022 Online</nobr>
+
+//nobr[text()='actiTIME 2020 Online']
+
+//nobr[contains(text(),'actiTIME')]
+//nobr[contains(text(),'Online')]
+
+//nobr[contains(text(),'actiTIME') and contains(text(),'Online')]
+
+//nobr[starts-with(text(),'actiTIME')]  xpath 1.0
+
+XXXXX //nobr[ends-with(text(),'Online')] ---xpath 2.0 XXXX
+
+<a href="http://www.actitime.com/kyhuyhjlhshfjsdh">actiTIME Inc.</a>
+//a[@href='http://www.actitime.com']
+//a[contains(@href,'actitime.com')]
+//a[starts-with(@href,'http://www.actitime')]
+
+<a ..............>Inbox(3)</a>
+-- 
+By.PARTIAL_LINK_TEXT,'Inbox'
+//a[contains(text(),'Inbox')]
+//a[starts-with(text(),'Inbox')]
+
+<span............>Inbox(3)</span> 
+//span[conatins(text(),'Inbox')]
+//span[starts-with(text(),'Inbox')]
+
+  tag[conatins(arg1,arg2)]
+  arg1---> @AN   or text()
+  arg2----> 'value'
+
+
+

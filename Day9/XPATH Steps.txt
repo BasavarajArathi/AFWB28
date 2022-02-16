@@ -1,0 +1,8 @@
+﻿Dynamic xpath
+1. inspect independent element
+2. note down its html code
+3. place the mouse pointer on html source code of independent element and move mouse pointer in upward direction till it highlights both IE and DE Common parent
+4. note down the path from IE to CP
+5. use arrows to navigate from CP to DE, note down its path
+6. write xpath from IE to CP and then to DE
+

@@ -1,0 +1,20 @@
+PyTest-Unit Testing tool or Framework
+used to run multiple tests and generate report
+in PyTest module,class and method should start with 'test'
+we run the test from terminal
+	Right click on the package-->Open in -->terminal
+in the terminal use the cmd 'pytest'
+>pytest
+
+it will collect all the methods which starts with 'test' and runs them one by one automatically
+>pytest -v              verbose (more details)
+
+
+>pytest -vs             verbose + std o/p
+
+>pytest test_demo1.py  -vs
+
+>pytest test_demo2.py::Test_Class3  -vs
+
+>pytest test_demo2.py::Test_Class3::test_method6  -vs
+

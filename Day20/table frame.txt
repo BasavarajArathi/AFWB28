@@ -1,0 +1,7 @@
+table        		frame
+data				insert existing page
+tr td				iframe
+table can contain
+element			contains complete page
+no need to switch	switch is mandatory
+
